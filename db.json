@@ -1,0 +1,257 @@
+{
+  "ships": [
+    {
+      "id": 1,
+      "name": "USS Enterprise",
+      "registry": "NCC-1701-D",
+      "class": "Galaxy",
+      "captain": "Jean-Luc Picard",
+      "status": "active",
+      "sector": "Alpha Quadrant",
+      "crewSize": 1012,
+      "weapons": {
+        "phaserArrays": 12,
+        "photonTorpedos": 250,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 47
+    },
+    {
+      "id": 2,
+      "name": "USS Defiant",
+      "registry": "NX-74205",
+      "class": "Defiant",
+      "captain": "Benjamin Sisko",
+      "status": "active",
+      "sector": "Deep Space 9",
+      "crewSize": 50,
+      "weapons": {
+        "phaserArrays": 4,
+        "photonTorpedos": 0,
+        "quantumTorpedos": 48
+      },
+      "missionId": null,
+      "completedMissions": 31
+    },
+    {
+      "id": 3,
+      "name": "USS Voyager",
+      "registry": "NCC-74656",
+      "class": "Intrepid",
+      "captain": "Kathryn Janeway",
+      "status": "active",
+      "sector": "Beta Quadrant",
+      "crewSize": 141,
+      "weapons": {
+        "phaserArrays": 13,
+        "photonTorpedos": 38,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 22
+    },
+    {
+      "id": 4,
+      "name": "USS Titan",
+      "registry": "NCC-80102",
+      "class": "Luna",
+      "captain": "William Riker",
+      "status": "active",
+      "sector": "Alpha Quadrant",
+      "crewSize": 350,
+      "weapons": {
+        "phaserArrays": 8,
+        "photonTorpedos": 100,
+        "quantumTorpedos": 25
+      },
+      "missionId": null,
+      "completedMissions": 15
+    },
+    {
+      "id": 5,
+      "name": "USS Equinox",
+      "registry": "NCC-72381",
+      "class": "Nova",
+      "captain": "Rudolph Ransom",
+      "status": "repair",
+      "sector": "Alpha Quadrant",
+      "crewSize": 78,
+      "weapons": {
+        "phaserArrays": 4,
+        "photonTorpedos": 40,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 8
+    },
+    {
+      "id": 6,
+      "name": "USS Excelsior",
+      "registry": "NCC-2000",
+      "class": "Excelsior",
+      "captain": "Hikaru Sulu",
+      "status": "active",
+      "sector": "Beta Quadrant",
+      "crewSize": 750,
+      "weapons": {
+        "phaserArrays": 8,
+        "photonTorpedos": 120,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 63
+    },
+    {
+      "id": 7,
+      "name": "USS Thunderchild",
+      "registry": "NCC-63549",
+      "class": "Akira",
+      "captain": "Erika Hernandez",
+      "status": "mission",
+      "sector": "Gamma Quadrant",
+      "crewSize": 500,
+      "weapons": {
+        "phaserArrays": 6,
+        "photonTorpedos": 300,
+        "quantumTorpedos": 50
+      },
+      "missionId": 2,
+      "completedMissions": 19
+    }
+  ],
+  "missions": [
+    {
+      "id": 1,
+      "name": "Operation Neutral Zone",
+      "description": "Patrouilliere entlang der Neutralen Zone zur romulanischen Grenze. Ziel ist es verdächtige Aktivitäten zu dokumentieren und einen Bericht ans Sternenflotten-Kommando zu übermitteln.",
+      "sector": "Neutral Zone",
+      "difficulty": "easy",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 2,
+      "dispatchedAt": null
+    },
+    {
+      "id": 2,
+      "name": "Erste Kontakt - Sektor 441",
+      "description": "In Sektor 441 wurde eine unbekannte Spezies entdeckt. Ziel ist es friedlichen Erstkontakt herzustellen und ein Kommunikationsprotokoll zu etablieren.",
+      "sector": "Gamma Quadrant",
+      "difficulty": "medium",
+      "status": "active",
+      "shipId": 7,
+      "durationMinutes": 5,
+      "dispatchedAt": null
+    },
+    {
+      "id": 3,
+      "name": "Borg-Aufklärung Delta-9",
+      "description": "Ein Borg-Kubus wurde im Delta Quadranten gesichtet. Ziel ist es das Schiff zu verfolgen, Bewegungsmuster zu analysieren und sicher zur Basis zurückzukehren. Kein direkter Kontakt.",
+      "sector": "Delta Quadrant",
+      "difficulty": "hard",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 10,
+      "dispatchedAt": null
+    },
+    {
+      "id": 4,
+      "name": "Humanitäre Hilfe - Bajor",
+      "description": "Der Planet Bajor benötigt dringend medizinische Versorgungsgüter nach einer Naturkatastrophe. Ziel ist es die Güter sicher zu liefern und beim Aufbau der Infrastruktur zu helfen.",
+      "sector": "Alpha Quadrant",
+      "difficulty": "easy",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 2,
+      "dispatchedAt": null
+    },
+    {
+      "id": 5,
+      "name": "Dominion-Verhandlungen",
+      "description": "Das Dominion hat Verhandlungsbereitschaft signalisiert. Ziel ist es eine Waffenstillstandsvereinbarung auszuhandeln und die Bedingungen ans Föderationsrat zu übermitteln.",
+      "sector": "Gamma Quadrant",
+      "difficulty": "medium",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 5,
+      "dispatchedAt": null
+    },
+    {
+      "id": 6,
+      "name": "Anomalie im Badlands",
+      "description": "Eine merkwürdige Raumzeitanomalie wurde in den Badlands entdeckt. Wissenschaftliches Ziel: Proben entnehmen, Ursache analysieren und mögliche Gefahr für umliegende Systeme einschätzen.",
+      "sector": "Alpha Quadrant",
+      "difficulty": "medium",
+      "status": "completed",
+      "shipId": null,
+      "durationMinutes": 5,
+      "dispatchedAt": null
+    },
+    {
+      "id": 7,
+      "name": "Ocampa-Spur",
+      "description": "Sensoren haben eine schwache Energiesignatur registriert die der Ocampa-Technologie ähnelt. Ziel ist es die Quelle zu lokalisieren und zu prüfen ob es Überlebende oder Relikte des Ocampa-Volkes gibt.",
+      "sector": "Delta Quadrant",
+      "difficulty": "easy",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 2,
+      "dispatchedAt": null
+    },
+    {
+      "id": 8,
+      "name": "Kazon-Bedrohung - Sektor 22185",
+      "description": "Ein Kazon-Kollektiv hat eine Föderationsaußenstation angegriffen und Technologie gestohlen. Ziel ist es die gestohlene Technologie zurückzuholen, bevor die Kazon sie einsetzen können.",
+      "sector": "Delta Quadrant",
+      "difficulty": "hard",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 10,
+      "dispatchedAt": null
+    },
+    {
+      "id": 9,
+      "name": "Nekrit-Expanse Kartierung",
+      "description": "Die Nekrit-Expanse ist eines der unerforschten Gebiete des Delta Quadranten. Ziel ist es sichere Routen durch die Expanse zu kartieren und Ressourcenvorkommen für zukünftige Missionen zu dokumentieren.",
+      "sector": "Delta Quadrant",
+      "difficulty": "medium",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 5,
+      "dispatchedAt": null
+    },
+    {
+      "id": 10,
+      "name": "Hirogen-Jagdgebiet",
+      "description": "Die Hirogen haben Föderationsschiffe als Beute markiert. Ziel ist es in ihr Jagdgebiet vorzudringen, ihre Kommunikationsnetzwerk-Relais zu deaktivieren und sichere Passage zu verhandeln.",
+      "sector": "Delta Quadrant",
+      "difficulty": "hard",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 10,
+      "dispatchedAt": null
+    },
+    {
+      "id": 11,
+      "name": "Talaxianische Flüchtlinge",
+      "description": "Eine Gruppe talaxianischer Flüchtlinge wurde in einem Asteroidenfeld entdeckt. Ziel ist es die Flüchtlinge sicher zu evakuieren und eine neue Heimat für sie zu finden.",
+      "sector": "Delta Quadrant",
+      "difficulty": "easy",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 2,
+      "dispatchedAt": null
+    },
+    {
+      "id": 12,
+      "name": "Spezieskatalog 8472",
+      "description": "Spezies 8472 wurde außerhalb des Fluidraums gesichtet – das erste Mal seit dem Konflikt mit den Borg. Ziel ist es Kontakt aufzunehmen, ihre Absichten zu klären und einen Nichtangriffspakt auszuhandeln.",
+      "sector": "Delta Quadrant",
+      "difficulty": "hard",
+      "status": "open",
+      "shipId": null,
+      "durationMinutes": 10,
+      "dispatchedAt": null
+    }
+  ]
+}
