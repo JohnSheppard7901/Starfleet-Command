@@ -1,4 +1,23 @@
+:root{
+    --starfleet-gold: rgb(255, 204, 0);
+    --deep-space-blue: rgb(0, 51, 102);
+}
+
 .statusSymbolSize{
     height: 12px;
     width: 12px;
+}
+
+.blueBG{
+    background-color: var(--deep-space-blue);
+    color: var(--starfleet-gold);
+}
+
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
