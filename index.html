@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ships</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="css/index.css" rel="stylesheet"> 
   </head>
   <body>
     
@@ -12,44 +13,32 @@
         <h1 class="text-center">Starfleet Management - Ship Overview</h1>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card" >
-                    <img class="card-img-top" src="img/USS_Titan.webp" alt="Card image cap">
-                    <div class="card-body">
-                        <div class="d-flex align-items-space-between justify-content-between">
-                            <h5 class="card-title">USS Titan</h5>
-                            Status: Active
-                        </div>
-                        Captain: James T. Kirk
-       
-                    </div>
-                    <div class="card-footer d-flex align-items-space-between justify-content-end">
-                        <button class="btn btn-primary">Details</button>
-                    </div>
-                </div> <!-- /.card -->
-            </div> <!-- /.col -->
-
-             <div class="col">
-                <div class="card" >
+    <div class="container ">
+        <div class="row bg-danger">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100" >
                     <img class="card-img-top" src="img/tos.webp" alt="Card image cap">
                     <div class="card-body">
-                        <div class="d-flex align-items-space-between justify-content-between">
+                        <div class="d-flex justify-content-between">
                             <h5 class="card-title">USS Titan</h5>
-                            Status: Active
+                            <div>
+                               Status: 
+                                <span class="d-inline-block rounded-circle bg-success statusSymbolSize"></span> 
+                            </div>                            
                         </div>
-                        Captain: James T. Kirk
+                        <p class="card-text">
+                            Captain: James T. Kirk
+                        </p>
+                        
        
                     </div>
-                    <div class="card-footer d-flex align-items-space-between justify-content-end">
+                    <div class="card-footer d-flex justify-content-end">
                         <button class="btn btn-primary">Details</button>
+                        <button class="btn btn-success ms-2">Dispatch</button>
                     </div>
                 </div> <!-- /.card -->
             </div> <!-- /.col -->
-           
         </div> <!-- /.row -->
-
     </div>
 
     
