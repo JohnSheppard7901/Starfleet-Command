@@ -15,112 +15,136 @@
     </div>
 
 
-    
+    <!-- Navigation / Toggle -->
+    <div class="d-flex justify-content-center mt-5">
+        <div class="btn-group" role="tablist">
+            <button class="btn btn-outline-primary active nav-link pe-2"
+                data-bs-toggle="pill"
+                data-bs-target="#missionsView"
+                type="button">
+                <i class="bi bi-list-stars mx-2"></i> Missions
+                
+            </button>
+            <button class="btn btn-outline-primary nav-lin ps-2"
+                data-bs-toggle="pill"
+                data-bs-target="#shipsView"
+                type="button">
+                <i class="bi bi-rocket-takeoff me-2"></i> Ships
+            </button>
+        </div>
+    </div>
 
-    <div class="container border border-5 rounded shadow p-2 mt-5">
+    <!-- Tab Content -->
+    <div class="tab-content my-5">
+        <div class="container border border-5 rounded shadow p-2 mt-5
+                tab-pane fade show active" id="missionsView">
 
-        <h2 class="text-center m-4">Missions Overview</h2>
-        <div class="alert alert-info">
-            <i class="bi bi-info-circle me-2"></i>
-            <span id="missionsAmount"></span> mission(s) currently in progress
+            <h2 class="text-center m-4">Missions Overview</h2>
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle me-2"></i>
+                <span id="missionsAmount"></span> mission(s) currently in progress
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Mission Name</th>
+                            <th>Difficulty</th>
+                            <th>Status</th>
+                            <th>Assigned Ship</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="missionTableBody">
+                        <!-- Table Row Blueprint: <tr>
+                            <td>Explore Gamma Sector</td>
+                            <td><span class="badge text-bg-warning">Medium</span></td>
+                            <td>
+                                <span class="badge text-bg-info">
+                                    <i class="bi bi-arrow-repeat me-1"></i>
+                                    In Progress
+                                </span>
+                            </td>
+                            <td>USS Titan</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Diplomatic Escort</td>
+                            <td><span class="badge text-bg-success">Low</span></td>
+                            <td>
+                                <span class="badge text-bg-success">
+                                    <i class="bi bi-check2-circle me-1"></i>Completed 
+                                </span>
+                            </td>
+                            <td>USS Enterprise</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Border Patrol</td>
+                            <td><span class="badge text-bg-danger">High</span></td>
+                            <td>
+                                <span class="badge text-bg-secondary">
+                                    <i class="bi bi-hourglass-split me-1"></i>
+                                    Pending
+                                </span>
+                            </td>
+                            <td></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#dispatchShipsModal"
+                                >Dispatch</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>                     
+        </div>
+        
+        <div class="container border border-5 rounded shadow p-4 my-5
+                tab-pane fade" id="shipsView">
+
+            <h2 class="text-center m-4">Ships Overview</h2>
+            <div class="row gy-4" id="shipsContainer">
+
+                <!-- Card Blueprint:
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100" >
+                        <img class="card-img-top" src="img/tos.webp" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">USS Titan</h5>
+                                <div>
+                                Status: 
+                                    <span class="d-inline-block rounded-circle bg-success statusSymbolSize"></span> 
+                                </div>                            
+                            </div>
+                            <p class="card-text">
+                                Captain: James T. Kirk
+                            </p>
+                            
+                        </div>
+                        <div class="card-footer d-flex justify-content-end">
+                            <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#shipDetailsModal"
+                            >
+                                Details
+                            </button>
+                            <button class="btn btn-success ms-2">Dispatch</button>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div> <!-- /.row -->
         </div>
 
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Mission Name</th>
-                        <th>Difficulty</th>
-                        <th>Status</th>
-                        <th>Assigned Ship</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="missionTableBody">
-                    <tr>
-                        <td>Explore Gamma Sector</td>
-                        <td><span class="badge text-bg-warning">Medium</span></td>
-                        <td>
-                            <span class="badge text-bg-info">
-                                <i class="bi bi-arrow-repeat me-1"></i>
-                                In Progress
-                            </span>
-                        </td>
-                        <td>USS Titan</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Diplomatic Escort</td>
-                        <td><span class="badge text-bg-success">Low</span></td>
-                        <td>
-                            <span class="badge text-bg-success">
-                                <i class="bi bi-check2-circle me-1"></i>Completed 
-                            </span>
-                        </td>
-                        <td>USS Enterprise</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Border Patrol</td>
-                        <td><span class="badge text-bg-danger">High</span></td>
-                         <td>
-                            <span class="badge text-bg-secondary">
-                                <i class="bi bi-hourglass-split me-1"></i>
-                                Pending
-                            </span>
-                        </td>
-                        <td></td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-danger"
-                                data-bs-toggle="modal"
-                                data-bs-target="#dispatchShipsModal"
-                            >Dispatch</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>                     
     </div>
 
+        
 
     
-    <div class="container border border-5 rounded shadow p-4 my-5">
-
-        <h2 class="text-center m-4">Ships Overview</h2>
-        <div class="row gy-4" id="shipsContainer">
-
-            <!-- Card Blueprint:
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100" >
-                    <img class="card-img-top" src="img/tos.webp" alt="Card image cap">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="card-title">USS Titan</h5>
-                            <div>
-                               Status: 
-                                <span class="d-inline-block rounded-circle bg-success statusSymbolSize"></span> 
-                            </div>                            
-                        </div>
-                        <p class="card-text">
-                            Captain: James T. Kirk
-                        </p>
-                        
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <button class="btn btn-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#shipDetailsModal"
-                        >
-                            Details
-                        </button>
-                        <button class="btn btn-success ms-2">Dispatch</button>
-                    </div>
-                </div>
-            </div> -->
-
-        </div> <!-- /.row -->
-    </div>
-
 
 
     <!-- Modal for ship details -->
