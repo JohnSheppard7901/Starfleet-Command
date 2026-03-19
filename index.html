@@ -22,7 +22,7 @@
         <h2 class="text-center m-4">Missions Overview</h2>
         <div class="alert alert-info">
             <i class="bi bi-info-circle me-2"></i>
-            2 missions currently in progress.
+            <span id="missionsAmount"></span> mission(s) currently in progress
         </div>
 
         <div class="table-responsive">
@@ -36,7 +36,7 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="missionTableBody">
                     <tr>
                         <td>Explore Gamma Sector</td>
                         <td><span class="badge text-bg-warning">Medium</span></td>
@@ -84,10 +84,12 @@
 
 
     
-    <div class="container border border-5 rounded shadow p-4 mt-5">
+    <div class="container border border-5 rounded shadow p-4 my-5">
 
         <h2 class="text-center m-4">Ships Overview</h2>
-        <div class="row">
+        <div class="row gy-4" id="shipsContainer">
+
+            <!-- Card Blueprint:
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100" >
                     <img class="card-img-top" src="img/tos.webp" alt="Card image cap">
@@ -103,7 +105,6 @@
                             Captain: James T. Kirk
                         </p>
                         
-       
                     </div>
                     <div class="card-footer d-flex justify-content-end">
                         <button class="btn btn-primary"
@@ -114,8 +115,9 @@
                         </button>
                         <button class="btn btn-success ms-2">Dispatch</button>
                     </div>
-                </div> <!-- /.card -->
-            </div> <!-- /.col -->
+                </div>
+            </div> -->
+
         </div> <!-- /.row -->
     </div>
 
@@ -133,6 +135,27 @@
 
                 <!-- <img class="img-fluid w-100" src="img/tos.webp" alt="Image of Ship"> -->
                 <div class="modal-body">
+
+                    <!-- Accordion -->                    
+                    <div class="accordion mb-4" id="vesselProfile">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#shipProfile">
+                                    <strong>Vessel Profile</strong>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse show"
+                                data-bs-parent="#vesselProfile" 
+                                id="shipProfile">
+                                <div class="accordion-body">
+                                    USS Titan, a Luna-class starship, is led by Captain William Riker. Known for fostering a collaborative and adaptive crew environment, Titan excels in scientific research and diplomacy. First Officer Deanna Troi provides invaluable psychological support and negotiation skills, while the engineering and tactical teams consistently display innovation and precision. The Titan often undertakes complex exploratory missions that require a blend of tactical readiness and cultural sensitivity.
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
                     <table class="table table-bordered mb-4">
                         <thead class="table-light">
                             <tr>
@@ -166,7 +189,7 @@
                             </tr>
                         </tbody>
                     </table>
-
+                
                     <table class="table table-bordered mb-4">
                         <thead class="table-light">
                             <tr>
@@ -241,9 +264,16 @@
                         <label class="form-label"><strong>Mission</strong></label>
                         <input type="text" class="form-control" value="Border Patrol" readonly>
                     </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Mission description</strong></label>
+                        <p class="border rounded-3 p-3">
+                            Recover stolen Federation technology from a hostile faction, using tactical precision, strategic planning, and resourceful problem solving.
+                        </p>
+                    </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Select an available vessel</label>
+                        <label class="form-label"><strong>Select an available vessel</strong></label>
                         <select class="form-select">
                             <option value="">-- Select a ship --</option>
                             <option value="1">USS Voyager</option>
@@ -265,7 +295,7 @@
 
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

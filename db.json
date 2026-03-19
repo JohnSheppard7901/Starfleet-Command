@@ -6,16 +6,18 @@
       "registry": "NCC-1701-D",
       "class": "Galaxy",
       "captain": "Jean-Luc Picard",
-      "status": "active",
+      "status": "available",
       "sector": "Alpha Quadrant",
       "crewSize": 1012,
+      "image": "enterprise.jpg",
       "weapons": {
         "phaserArrays": 12,
         "photonTorpedos": 250,
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 47
+      "completedMissions": 47,
+      "description": "USS Enterprise-D is a Galaxy-class starship renowned for its exploration and diplomatic missions under Captain Jean-Luc Picard. The crew excels in science, diplomacy, and tactical strategy, with First Officer William Riker providing exceptional leadership and Lt. Commander Data offering unparalleled computational and technical expertise. The Enterprise's diverse crew and advanced facilities make it highly adaptable to both combat and delicate negotiation scenarios."
     },
     {
       "id": 2,
@@ -23,16 +25,18 @@
       "registry": "NX-74205",
       "class": "Defiant",
       "captain": "Benjamin Sisko",
-      "status": "active",
+      "status": "available",
       "sector": "Deep Space 9",
       "crewSize": 50,
+      "image": "defiant.jpg",
       "weapons": {
         "phaserArrays": 4,
         "photonTorpedos": 0,
         "quantumTorpedos": 48
       },
       "missionId": null,
-      "completedMissions": 31
+      "completedMissions": 31,
+      "description": "USS Defiant is a compact but powerful warship optimized for rapid response and deep-space combat. Under Captain Benjamin Sisko, the crew demonstrates unmatched tactical coordination, resilience, and ingenuity, often operating under high-pressure scenarios during the Dominion War. Chief O'Brien ensures mechanical reliability, while Kira Nerys offers strategic and diplomatic insight, making the Defiant capable of facing overwhelming odds while maintaining crew cohesion and mission focus."
     },
     {
       "id": 3,
@@ -40,16 +44,18 @@
       "registry": "NCC-74656",
       "class": "Intrepid",
       "captain": "Kathryn Janeway",
-      "status": "active",
+      "status": "available",
       "sector": "Beta Quadrant",
       "crewSize": 141,
+      "image": "voyager.jpg",
       "weapons": {
         "phaserArrays": 13,
         "photonTorpedos": 38,
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 22
+      "completedMissions": 22,
+      "description": "USS Voyager is an Intrepid-class vessel stranded in the distant Delta Quadrant, commanded by Captain Kathryn Janeway, whose leadership combines scientific curiosity with unwavering determination. The crew is diverse and highly skilled: Chakotay provides exceptional tactical insight, Tuvok ensures security and discipline, and Seven of Nine contributes advanced Borg technology expertise. Voyager's crew is known for resilience, resourcefulness, and teamwork, navigating unknown space while maintaining morale and exploring new civilizations."
     },
     {
       "id": 4,
@@ -57,16 +63,18 @@
       "registry": "NCC-80102",
       "class": "Luna",
       "captain": "William Riker",
-      "status": "active",
+      "status": "mission",
       "sector": "Alpha Quadrant",
       "crewSize": 350,
+      "image": "titan.jpg",
       "weapons": {
         "phaserArrays": 8,
         "photonTorpedos": 100,
         "quantumTorpedos": 25
       },
       "missionId": null,
-      "completedMissions": 15
+      "completedMissions": 15,
+      "description": "USS Titan, a Luna-class starship, is led by Captain William Riker. Known for fostering a collaborative and adaptive crew environment, Titan excels in scientific research and diplomacy. First Officer Deanna Troi provides invaluable psychological support and negotiation skills, while the engineering and tactical teams consistently display innovation and precision. The Titan often undertakes complex exploratory missions that require a blend of tactical readiness and cultural sensitivity."
     },
     {
       "id": 5,
@@ -74,16 +82,18 @@
       "registry": "NCC-72381",
       "class": "Nova",
       "captain": "Rudolph Ransom",
-      "status": "repair",
+      "status": "available",
       "sector": "Alpha Quadrant",
       "crewSize": 78,
+      "image": "equinox.jpg",
       "weapons": {
         "phaserArrays": 4,
         "photonTorpedos": 40,
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 8
+      "completedMissions": 8,
+      "description": "USS Equinox is a Nova-class vessel with a small but specialized crew led by Captain Rudolph Ransom. The ship emphasizes adaptability and efficiency, with crew members trained in both scientific research and rapid-response problem solving. The Equinox team excels in quick decision-making under pressure and is skilled at navigating complex or hazardous environments, although their small size demands careful coordination and resource management."
     },
     {
       "id": 6,
@@ -91,95 +101,194 @@
       "registry": "NCC-2000",
       "class": "Excelsior",
       "captain": "Hikaru Sulu",
-      "status": "active",
+      "status": "available",
       "sector": "Beta Quadrant",
       "crewSize": 750,
+      "image": "excelsior.jpg",
       "weapons": {
         "phaserArrays": 8,
         "photonTorpedos": 120,
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 63
+      "completedMissions": 63,
+      "description": "USS Excelsior, under Captain Hikaru Sulu, is a versatile starship with a crew skilled in exploration, diplomacy, and tactical operations. The Excelsior team is recognized for its high morale, cohesion, and adaptability, capable of undertaking extended missions across the Beta Quadrant. Crew members specialize in advanced navigation, science, and first-contact scenarios, making the ship an essential asset in both peaceful and conflict situations."
     },
     {
       "id": 7,
       "name": "USS Thunderchild",
       "registry": "NCC-63549",
       "class": "Akira",
-      "captain": "Erika Hernandez",
+      "captain": "Valeria Thorne",
       "status": "mission",
       "sector": "Gamma Quadrant",
       "crewSize": 500,
+      "image": "thunderchild.jpg",
       "weapons": {
         "phaserArrays": 6,
         "photonTorpedos": 300,
         "quantumTorpedos": 50
       },
       "missionId": 2,
-      "completedMissions": 19
+      "completedMissions": 19,
+      "description": "USS Thunderchild, an Akira-class vessel, is commanded by Captain Valeria Thorne, whose leadership is defined by strategic insight and decisiveness. The crew is highly trained in coordinated operations and deep-space tactical maneuvers. First Officer Ral K'Tar specializes in intelligence and reconnaissance, making the Thunderchild a formidable force in both exploratory missions and combat scenarios. Crew morale and discipline are emphasized to handle the demands of the Gamma Quadrant."
+    },
+    {
+      "id": 8,
+      "name": "USS Aventine",
+      "registry": "NCC-82602",
+      "class": "Vesta",
+      "captain": "Ezri Dax",
+      "status": "available",
+      "sector": "Beta Quadrant",
+      "crewSize": 300,
+      "image": "aventine.jpg",
+      "weapons": {
+        "phaserArrays": 10,
+        "photonTorpedos": 120,
+        "quantumTorpedos": 80
+      },
+      "missionId": null,
+      "completedMissions": 28,
+      "description": "USS Aventine, a Vesta-class ship, is captained by Ezri Dax, whose empathetic leadership fosters a collaborative and innovative crew environment. The crew excels in scientific research, negotiation, and tactical coordination, often leveraging Ezri's insight to navigate complex situations diplomatically. Each department is highly competent, with engineering and tactical specialists providing rapid solutions during unexpected challenges."
+    },
+    {
+      "id": 9,
+      "name": "USS Challenger",
+      "registry": "NCC-71099",
+      "class": "Galaxy",
+      "captain": "Geordi La Forge",
+      "status": "available",
+      "sector": "Alpha Quadrant",
+      "crewSize": 1000,
+      "image": "challenger.jpg",
+      "weapons": {
+        "phaserArrays": 12,
+        "photonTorpedos": 200,
+        "quantumTorpedos": 50
+      },
+      "missionId": null,
+      "completedMissions": 35,
+      "description": "USS Challenger is a Galaxy-class starship led by Captain Geordi La Forge, whose technical expertise ensures operational efficiency. The crew excels in engineering, tactical systems management, and scientific exploration. La Forge's leadership emphasizes creative problem solving and adaptability, making the Challenger a vessel capable of responding effectively to both first-contact scenarios and unexpected crises."
+    },
+    {
+      "id": 10,
+      "name": "USS Columbia",
+      "registry": "NX-02",
+      "class": "NX",
+      "captain": "Erika Hernandez",
+      "status": "available",
+      "sector": "Alpha Quadrant",
+      "crewSize": 85,
+      "image": "columbia.jpg",
+      "weapons": {
+        "phaserArrays": 2,
+        "photonTorpedos": 12,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 14,
+      "description": "USS Columbia, an early NX-class starship, is under Captain Erika Hernandez. The small crew is highly versatile, capable of scientific research, exploration, and tactical support. First Officer Lin provides specialized expertise in warp engineering and sensor analysis. Columbia is particularly effective in short-range missions where adaptability and precision are critical."
+    },
+    {
+      "id": 11,
+      "name": "USS Farragut",
+      "registry": "NCC-1647",
+      "class": "Constitution",
+      "captain": "T'Varell",
+      "status": "available",
+      "sector": "Alpha Quadrant",
+      "crewSize": 430,
+      "image": "farragut.jpg",
+      "weapons": {
+        "phaserArrays": 6,
+        "photonTorpedos": 90,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 20,
+      "description": "USS Farragut, a Constitution-class vessel, is commanded by the Vulcan Captain T'Varell, known for precise decision-making and logical strategic planning. The crew is highly disciplined and excels in scientific research, deep-space navigation, and tactical simulations. First Officer S'Rahn specializes in diplomacy and xenolinguistics, making the Farragut effective in first-contact scenarios and interstellar negotiations."
+    },
+    {
+      "id": 12,
+      "name": "USS Cayuga",
+      "registry": "NCC-1557",
+      "class": "Constitution",
+      "captain": "Marie Batel",
+      "status": "available",
+      "sector": "Alpha Quadrant",
+      "crewSize": 430,
+      "image": "cayuga.jpg",
+      "weapons": {
+        "phaserArrays": 6,
+        "photonTorpedos": 90,
+        "quantumTorpedos": 0
+      },
+      "missionId": null,
+      "completedMissions": 24,
+      "description": "USS Cayuga, Constitution-class starship, is under the leadership of Captain Marie Batel. The crew is highly capable in both exploration and tactical missions. Batel encourages strong teamwork and situational adaptability, with specialized officers excelling in communications, first-contact protocols, and rapid tactical planning. The ship operates efficiently in both scientific and security missions."
     }
   ],
   "missions": [
     {
       "id": 1,
       "name": "Operation Neutral Zone",
-      "description": "Patrouilliere entlang der Neutralen Zone zur romulanischen Grenze. Ziel ist es verdächtige Aktivitäten zu dokumentieren und einen Bericht ans Sternenflotten-Kommando zu übermitteln.",
+      "description": "Patrol along the Neutral Zone near the Romulan border, observing suspicious activities and gathering intelligence while ensuring diplomatic protocols are maintained.",
       "sector": "Neutral Zone",
       "difficulty": "easy",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 2,
       "dispatchedAt": null
     },
     {
       "id": 2,
-      "name": "Erste Kontakt - Sektor 441",
-      "description": "In Sektor 441 wurde eine unbekannte Spezies entdeckt. Ziel ist es friedlichen Erstkontakt herzustellen und ein Kommunikationsprotokoll zu etablieren.",
+      "name": "First Contact - Sector 441",
+      "description": "Establish peaceful communication with a newly discovered species and document cultural and technological information, ensuring safe and respectful interaction.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "active",
-      "shipId": 7,
+      "status": "in progress",
+      "shipId": null,
       "durationMinutes": 5,
       "dispatchedAt": null
     },
     {
       "id": 3,
-      "name": "Borg-Aufklärung Delta-9",
-      "description": "Ein Borg-Kubus wurde im Delta Quadranten gesichtet. Ziel ist es das Schiff zu verfolgen, Bewegungsmuster zu analysieren und sicher zur Basis zurückzukehren. Kein direkter Kontakt.",
+      "name": "Borg Recon Delta-9",
+      "description": "Track and analyze a Borg vessel in the Delta Quadrant, collecting movement data and returning safely without direct engagement. Crew must rely on sensor expertise and evasive maneuvers.",
       "sector": "Delta Quadrant",
       "difficulty": "hard",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 10,
       "dispatchedAt": null
     },
     {
       "id": 4,
-      "name": "Humanitäre Hilfe - Bajor",
-      "description": "Der Planet Bajor benötigt dringend medizinische Versorgungsgüter nach einer Naturkatastrophe. Ziel ist es die Güter sicher zu liefern und beim Aufbau der Infrastruktur zu helfen.",
+      "name": "Humanitarian Aid - Bajor",
+      "description": "Deliver critical medical and relief supplies after a natural disaster and assist with rebuilding infrastructure, demonstrating coordination, resource management, and diplomacy.",
       "sector": "Alpha Quadrant",
       "difficulty": "easy",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 2,
       "dispatchedAt": null
     },
     {
       "id": 5,
-      "name": "Dominion-Verhandlungen",
-      "description": "Das Dominion hat Verhandlungsbereitschaft signalisiert. Ziel ist es eine Waffenstillstandsvereinbarung auszuhandeln und die Bedingungen ans Föderationsrat zu übermitteln.",
+      "name": "Dominion Negotiations",
+      "description": "Engage in diplomatic talks to negotiate a ceasefire agreement, leveraging negotiation skills, cultural knowledge, and strategic planning to reach a peaceful resolution.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 5,
       "dispatchedAt": null
     },
     {
       "id": 6,
-      "name": "Anomalie im Badlands",
-      "description": "Eine merkwürdige Raumzeitanomalie wurde in den Badlands entdeckt. Wissenschaftliches Ziel: Proben entnehmen, Ursache analysieren und mögliche Gefahr für umliegende Systeme einschätzen.",
+      "name": "Anomaly in the Badlands",
+      "description": "Investigate a spatial-temporal anomaly, collect samples, analyze its origin, and assess potential threats, requiring scientific precision and careful navigation.",
       "sector": "Alpha Quadrant",
       "difficulty": "medium",
       "status": "completed",
@@ -189,68 +298,134 @@
     },
     {
       "id": 7,
-      "name": "Ocampa-Spur",
-      "description": "Sensoren haben eine schwache Energiesignatur registriert die der Ocampa-Technologie ähnelt. Ziel ist es die Quelle zu lokalisieren und zu prüfen ob es Überlebende oder Relikte des Ocampa-Volkes gibt.",
+      "name": "Ocampa Signal",
+      "description": "Investigate a faint energy signature resembling Ocampa technology, locate the source, and determine if any survivors or relics remain.",
       "sector": "Delta Quadrant",
       "difficulty": "easy",
-      "status": "open",
-      "shipId": null,
+      "status": "pending",
+      "shipId": 3,
       "durationMinutes": 2,
       "dispatchedAt": null
     },
     {
       "id": 8,
-      "name": "Kazon-Bedrohung - Sektor 22185",
-      "description": "Ein Kazon-Kollektiv hat eine Föderationsaußenstation angegriffen und Technologie gestohlen. Ziel ist es die gestohlene Technologie zurückzuholen, bevor die Kazon sie einsetzen können.",
+      "name": "Kazon Threat - Sector 22185",
+      "description": "Recover stolen Federation technology from a hostile faction, using tactical precision, strategic planning, and resourceful problem solving.",
       "sector": "Delta Quadrant",
       "difficulty": "hard",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 10,
       "dispatchedAt": null
     },
     {
       "id": 9,
-      "name": "Nekrit-Expanse Kartierung",
-      "description": "Die Nekrit-Expanse ist eines der unerforschten Gebiete des Delta Quadranten. Ziel ist es sichere Routen durch die Expanse zu kartieren und Ressourcenvorkommen für zukünftige Missionen zu dokumentieren.",
+      "name": "Nekrit Expanse Mapping",
+      "description": "Chart unexplored regions, documenting safe passage, resources, and hazards for future missions. Navigation and scientific analysis are critical for mission success.",
       "sector": "Delta Quadrant",
       "difficulty": "medium",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 5,
       "dispatchedAt": null
     },
     {
       "id": 10,
-      "name": "Hirogen-Jagdgebiet",
-      "description": "Die Hirogen haben Föderationsschiffe als Beute markiert. Ziel ist es in ihr Jagdgebiet vorzudringen, ihre Kommunikationsnetzwerk-Relais zu deaktivieren und sichere Passage zu verhandeln.",
+      "name": "Hirogen Hunting Grounds",
+      "description": "Enter hostile territory, disable communication relays, and secure safe passage. The mission tests tactical coordination, stealth, and crisis management skills.",
       "sector": "Delta Quadrant",
       "difficulty": "hard",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 10,
       "dispatchedAt": null
     },
     {
       "id": 11,
-      "name": "Talaxianische Flüchtlinge",
-      "description": "Eine Gruppe talaxianischer Flüchtlinge wurde in einem Asteroidenfeld entdeckt. Ziel ist es die Flüchtlinge sicher zu evakuieren und eine neue Heimat für sie zu finden.",
+      "name": "Talaxian Refugees",
+      "description": "Evacuate stranded refugees from a dangerous area and provide temporary shelter, demonstrating efficiency, compassion, and resource coordination.",
       "sector": "Delta Quadrant",
       "difficulty": "easy",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 2,
       "dispatchedAt": null
     },
     {
       "id": 12,
-      "name": "Spezieskatalog 8472",
-      "description": "Spezies 8472 wurde außerhalb des Fluidraums gesichtet – das erste Mal seit dem Konflikt mit den Borg. Ziel ist es Kontakt aufzunehmen, ihre Absichten zu klären und einen Nichtangriffspakt auszuhandeln.",
+      "name": "Species 8472 Contact",
+      "description": "Establish communication with Species 8472 outside fluidic space, clarify intentions, and negotiate a non-aggression understanding, relying on diplomacy and scientific expertise.",
       "sector": "Delta Quadrant",
       "difficulty": "hard",
-      "status": "open",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 10,
+      "dispatchedAt": null
+    },
+    {
+      "id": 13,
+      "name": "Delta Quadrant Supply Run",
+      "description": "Deliver essential supplies to distant outposts, requiring careful resource management, crew coordination, and defensive readiness in isolated regions of space.",
+      "sector": "Delta Quadrant",
+      "difficulty": "medium",
+      "status": "pending",
+      "shipId": null,
+      "durationMinutes": 6,
+      "dispatchedAt": null
+    },
+    {
+      "id": 14,
+      "name": "Covert Reconnaissance",
+      "description": "Undertake a covert observation mission in hostile territory, gathering intelligence while avoiding detection and coordinating rapid tactical maneuvers.",
+      "sector": "Gamma Quadrant",
+      "difficulty": "hard",
+      "status": "pending",
+      "shipId": null,
+      "durationMinutes": 8,
+      "dispatchedAt": null
+    },
+    {
+      "id": 15,
+      "name": "Diplomatic Escort Mission",
+      "description": "Escort diplomats to a sensitive negotiation, ensuring their safety while facilitating communication and providing strategic support, requiring precision and coordination.",
+      "sector": "Alpha Quadrant",
+      "difficulty": "medium",
+      "status": "pending",
+      "shipId": null,
+      "durationMinutes": 5,
+      "dispatchedAt": null
+    },
+    {
+      "id": 16,
+      "name": "Uncharted Nebula Exploration",
+      "description": "Investigate a previously unexplored nebula, collecting scientific data, mapping safe routes, and documenting unique phenomena. Crew expertise in navigation and astrophysics is essential.",
+      "sector": "Beta Quadrant",
+      "difficulty": "medium",
+      "status": "pending",
+      "shipId": null,
+      "durationMinutes": 7,
+      "dispatchedAt": null
+    },
+    {
+      "id": 17,
+      "name": "Cultural Exchange Initiative",
+      "description": "Engage with an alien civilization to share knowledge and establish mutual understanding, promoting diplomatic relations and scientific collaboration.",
+      "sector": "Alpha Quadrant",
+      "difficulty": "easy",
+      "status": "pending",
+      "shipId": null,
+      "durationMinutes": 4,
+      "dispatchedAt": null
+    },
+    {
+      "id": 18,
+      "name": "Temporal Anomaly Investigation",
+      "description": "Study a temporal disturbance affecting local space, analyzing patterns and ensuring containment to prevent harm to nearby systems, relying on advanced scientific expertise.",
+      "sector": "Beta Quadrant",
+      "difficulty": "hard",
+      "status": "pending",
+      "shipId": null,
+      "durationMinutes": 9,
       "dispatchedAt": null
     }
   ]
