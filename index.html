@@ -286,29 +286,25 @@
 
                     <div class="mb-3">
                         <label class="form-label"><strong>Mission</strong></label>
-                        <input type="text" class="form-control" value="Border Patrol" readonly>
+                        <input type="text" class="form-control" id="dispatchModalMissionName" readonly>
                     </div>
                     
                     <div class="mb-3">
                         <label class="form-label"><strong>Mission description</strong></label>
-                        <p class="border rounded-3 p-3">
-                            Recover stolen Federation technology from a hostile faction, using tactical precision, strategic planning, and resourceful problem solving.
-                        </p>
+                        <p class="border rounded-3 p-3" id="dispatchModalMissionDescription"></p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label"><strong>Select an available vessel</strong></label>
-                        <select class="form-select">
+                        <select class="form-select" id="dispatchModalSelect">
                             <option value="">-- Select a ship --</option>
-                            <option value="1">USS Voyager</option>
-                            <option value="2">USS Defiant</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="modal-footer blueBG">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Confirm Dispatch</button>
+                    <button type="button" class="btn btn-success" id="modalConfirmDispatchBtn">Confirm Dispatch</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Mission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  </head>
+  <body>
+      <div class="container mt-5">
+        <h1 class="text-center">Starfleet Management</h1>
+    </div>
+
+
+    <div class="container border border-5 rounded shadow p-4 my-5">
+
+      <h2 class="text-center m-4">Create a new mission</h2>
+            
+
+            <!-- Success Alert (hidden by default) -->
+      <div class="alert alert-success d-none mb-4" id="successAlert" role="alert">
+        <i class="bi bi-check-circle me-2"></i>
+        Mission successfully transmitted to Starfleet Command.
+      </div>
+
+      <form id="createMissionForm">
+        <div class="row g-3">
+
+          <!-- Mission Name -->
+          <div class="col-12">
+            <label for="missionName" class="form-label">Mission Name</label>
+            <input type="text" class="form-control" id="missionName" required>
+          </div>
+
+          <!-- Description -->
+          <div class="col-12">
+            <label for="missionDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="missionDescription" placeholder="Describe the mission objective..." required></textarea>
+          </div>
+
+          <!-- Difficulty + Sector -->
+          <div class="col-md-6">
+            <label for="missionDifficulty" class="form-label">Difficulty</label>
+            <select class="form-select" id="missionDifficulty" required>
+              <option value="" disabled selected>Select difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="missionSector" class="form-label">Sector</label>
+            <input type="text" class="form-control" id="missionSector" placeholder="e.g. Delta Quadrant" required>
+          </div>
+
+          <!-- Duration -->
+          <div class="col-md-6">
+            <label for="missionDuration" class="form-label">Duration (minutes)</label>
+            <input type="number" class="form-control" id="missionDuration" min="1" max="60" required>
+          </div>
+
+        </div><!-- /.row -->
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-end gap-2 mt-4">
+          <button type="button" class="btn btn-outline-secondary" id="resetBtn">
+            <i class="bi bi-x-circle me-1"></i> Clear
+          </button>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send me-1"></i> Transmit Mission
+          </button>
+        </div>
+
+      </form>
+
+           
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -9,17 +9,11 @@ loadShips();
 loadMissions();
 
 
+// SHIPS 
 async function loadShips() {
     const response = await fetch("http://localhost:3001/ships");
     ships = await response.json();
     renderShips(ships);
-}
-
-async function loadMissions() {
-    const response = await fetch("http://localhost:3001/missions");
-    missions = await response.json();
-    getMissionsInProgressAmount(missions);
-    renderMissions(missions);
 }
 
 function renderShips(ships){    
@@ -89,6 +83,14 @@ function queryAndSetDetailsModalElements(ship){
 }
 
 
+// MISSIONS
+async function loadMissions() {
+    const response = await fetch("http://localhost:3001/missions");
+    missions = await response.json();
+    getMissionsInProgressAmount(missions);
+    renderMissions(missions);
+}
+
 async function renderMissions(missions){ 
 
     const allTableRows = await Promise.all(missions.map(async (mission) => {
@@ -119,6 +121,7 @@ async function renderMissions(missions){
             dispatchBtn = `<button class="btn btn-sm btn-outline-danger"
                                 data-bs-toggle="modal"
                                 data-bs-target="#dispatchShipsModal"
+                                data-mission-id="${mission.id}"
                             >Dispatch</button>`;
         }else{
             assignedShip = await getShipById(mission.shipId);
@@ -150,6 +153,17 @@ async function renderMissions(missions){
         `;
     }));
     missionTableBody.innerHTML = allTableRows.join("");
+    document.querySelectorAll("[data-mission-id]").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const missionId = e.target.dataset.missionId;
+            const mission = missions.find(m => m.id === missionId);
+            console.log(missionId);
+            console.log(mission);
+
+            queryAndSetDispatchModalElements(mission);
+        });
+    });
+
 }
 
 function getMissionsInProgressAmount(missions){
@@ -162,3 +176,67 @@ async function getShipById(shipId) {
     const ship = await response.json();
     return ship.name;
 }
+
+
+function queryAndSetDispatchModalElements(mission){
+    //set name and description
+    document.getElementById("dispatchModalMissionName").value = mission.name;
+    document.getElementById("dispatchModalMissionDescription").innerHTML = mission.description;
+
+    //get html select element, filter ships and set every one as an option
+    const dispatchModalSelect = document.getElementById("dispatchModalSelect");
+    dispatchModalSelect.innerHTML = `<option value="">-- Select a ship --</option>`;
+    const availableShips = ships.filter(s => s.status === "available");
+
+    availableShips.forEach(s => {
+        let option = document.createElement("option");
+        option.value = s.id;
+        option.innerText = s.name;
+
+        dispatchModalSelect.appendChild(option);
+    });
+
+    //get btn to confirm dispatch and register an Event Listener to it
+    const oldBtn = document.getElementById("modalConfirmDispatchBtn");
+    const modalConfirmDispatchBtn = oldBtn.cloneNode(true);
+    oldBtn.replaceWith(modalConfirmDispatchBtn);
+
+    modalConfirmDispatchBtn.addEventListener("click", (e) => {
+        const selectedShipId = document.getElementById("dispatchModalSelect").value;
+        const shipId = parseInt(selectedShipId);
+        const missionId = parseInt(mission.id);
+        patchMissionData(shipId, missionId);
+        patchShipData(shipId, missionId);
+    });
+}
+
+async function patchMissionData(shipId, missionId){  
+    const response = await fetch(`http://localhost:3001/missions/${missionId}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            status: "in progress",
+            shipId: shipId
+        })
+    });
+    const updatedMission = await response.json();
+}
+
+
+async function patchShipData(shipId, missionId) {
+    const response = await fetch(`http://localhost:3001/ships/${shipId}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "applications/json"
+        },
+        body: JSON.stringify({
+            status: "mission",
+            missionId: missionId
+        })
+    });
+
+    const updatedShip = await response.json();
+}
+
