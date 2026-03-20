@@ -153,7 +153,7 @@
             <div class="modal-content">
 
                 <div class="modal-header blueBG">
-                    <h1 class="modal-title fs-5" id="shipDetailsModalLabel">Ship Specifications: USS Titan</h1>
+                    <h1 class="modal-title fs-5" id="shipDetailsModalLabel">Ship Specifications: <span class="detailsModalName"></span></h1>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -174,7 +174,7 @@
                                 data-bs-parent="#vesselProfile" 
                                 id="shipProfile">
                                 <div class="accordion-body">
-                                    USS Titan, a Luna-class starship, is led by Captain William Riker. Known for fostering a collaborative and adaptive crew environment, Titan excels in scientific research and diplomacy. First Officer Deanna Troi provides invaluable psychological support and negotiation skills, while the engineering and tactical teams consistently display innovation and precision. The Titan often undertakes complex exploratory missions that require a blend of tactical readiness and cultural sensitivity.
+                                    <p id="detailsModalDescription"></p>
                                 </div>
                             </div>
                         </div>                        
@@ -189,27 +189,27 @@
                         <tbody>
                             <tr>
                                 <td>Name:</td>
-                                <td>USS Titan</td>
+                                <td class="detailsModalName"></td>
                             </tr>
                             <tr>
                                 <td>Registry:</td>
-                                <td>NCC-80102</td>
+                                <td id="detailsModalRegistry"></td>
                             </tr>
                             <tr>
                                 <td>Class:</td>
-                                <td>Luna</td>
+                                <td id="detailsModalClass"></td>
                             </tr>
                             <tr>
                                 <td>Captain:</td>
-                                <td>William Riker</td>
+                                <td id="detailsModalCaptain"></td>
                             </tr>
                             <tr>
                                 <td>Status:</td>
-                                <td><span class="badge text-bg-success">active</span></td>
+                                <td><span class="badge" id="detailsModalStatus"></span></td>
                             </tr>
                             <tr>
                                 <td>Sector:</td>
-                                <td>Alpha Quadrant</td>
+                                <td id="detailsModalSector"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -223,15 +223,15 @@
                         <tbody>
                             <tr>
                                 <td>Crew Size:</td>
-                                <td>350</td>
+                                <td id="detailsModalCrewSize"></td>
                             </tr>
                             <tr>
                                 <td>Mission ID:</td>
-                                <td>null</td>
+                                <td id="detailsModalMissionId"></td>
                             </tr>
                             <tr>
                                 <td>Completed Missions:</td>
-                                <td>15</td>
+                                <td id="detailsModalCompletedMissions"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -245,15 +245,15 @@
                         <tbody>
                             <tr>
                                 <td>Phaser Arrays:</td>
-                                <td>8</td>
+                                <td id="detailsModalPhaserArrays"></td>
                             </tr>
                             <tr>
                                 <td>Photon Torpedos:</td>
-                                <td>100</td>
+                                <td id="detailsModalPhotonTorpedos"></td>
                             </tr>
                             <tr>
                                 <td>Quantum Torpedos:</td>
-                                <td>25</td>
+                                <td id="detailsModalQuantumTorpedos"></td>
                             </tr>
                         </tbody>
                     </table>

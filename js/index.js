@@ -2,19 +2,22 @@ const shipsContainer = document.getElementById("shipsContainer");
 const missionTableBody = document.getElementById("missionTableBody"); 
 const missionsAmount = document.getElementById("missionsAmount");
 
+let ships = [];
+let missions = [];
+
 loadShips();
 loadMissions();
 
 
 async function loadShips() {
     const response = await fetch("http://localhost:3001/ships");
-    const ships = await response.json();
+    ships = await response.json();
     renderShips(ships);
 }
 
 async function loadMissions() {
     const response = await fetch("http://localhost:3001/missions");
-    const missions = await response.json();
+    missions = await response.json();
     getMissionsInProgressAmount(missions);
     renderMissions(missions);
 }
@@ -32,7 +35,7 @@ function renderShips(ships){
                                 <span class="d-inline-block 
                                             rounded-circle
                                             statusSymbolSize
-                                            ${ship.status === 'available' ? 'bg-success' : 'bg-danger'} ">
+                                            ${ship.status === 'available' ? 'bg-success' : 'bg-danger'}">
                                 </span> 
                             </div>                            
                         </div>
@@ -45,6 +48,7 @@ function renderShips(ships){
                         <button class="btn btn-primary"
                             data-bs-toggle="modal"
                             data-bs-target="#shipDetailsModal"
+                            data-ship-id="${ship.id}"
                         >
                             Details
                         </button>
@@ -53,6 +57,35 @@ function renderShips(ships){
             </div> <!-- /.col -->`;
     });
     shipsContainer.innerHTML = allCards.join("");    
+
+    document.querySelectorAll("[data-ship-id]").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const shipId = e.target.dataset.shipId;            
+            let ship = ships.find((s) => s.id === shipId);
+            queryAndSetDetailsModalElements(ship);            
+        })
+    });
+}
+
+function queryAndSetDetailsModalElements(ship){
+    document.querySelectorAll(".detailsModalName").forEach(el => el.innerHTML = ship.name);
+    document.getElementById("detailsModalDescription").innerHTML = ship.description;
+    document.getElementById("detailsModalRegistry").innerHTML = ship.registry;
+    document.getElementById("detailsModalClass").innerHTML = ship.class;
+    document.getElementById("detailsModalCaptain").innerHTML = ship.captain;            
+    document.getElementById("detailsModalCrewSize").innerHTML = ship.crewSize;
+    document.getElementById("detailsModalCompletedMissions").innerHTML = ship.completedMissions;
+    document.getElementById("detailsModalSector").innerHTML = ship.sector;
+    document.getElementById("detailsModalMissionId").innerHTML = ship.missionId;
+
+    document.getElementById("detailsModalPhaserArrays").innerHTML = ship.weapons.phaserArrays;
+    document.getElementById("detailsModalPhotonTorpedos").innerHTML = ship.weapons.photonTorpedos;
+    document.getElementById("detailsModalQuantumTorpedos").innerHTML = ship.weapons.quantumTorpedos;
+
+    const statusElement = document.getElementById("detailsModalStatus");
+    statusElement.innerHTML = ship.status;
+    statusElement.classList.remove("text-bg-success", "text-bg-danger");
+    statusElement.classList.add(ship.status === "available" ? 'text-bg-success' : 'text-bg-danger');
 }
 
 

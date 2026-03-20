@@ -1,5 +1,6 @@
 :root{
-    --starfleet-gold: rgb(255, 204, 0);
+    --starfleet-gold: #FFCC00;
+    --starfleet-gold2: #e1cf5a;
     --deep-space-blue: rgb(0, 51, 102);
 }
 
@@ -11,6 +12,7 @@
 .blueBG{
     background-color: var(--deep-space-blue);
     color: var(--starfleet-gold);
+    text-shadow: 0 0 10px var(--starfleet-gold);
 }
 
 
