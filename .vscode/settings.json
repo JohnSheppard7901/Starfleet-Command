@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.multiRootWorkspaceName": "Starfleet-Command",
+
+    "liveServer.settings.ignoreFiles": [
+        "**/db.json"
+    ]
+}

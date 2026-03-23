@@ -39,7 +39,14 @@
         <div class="container border border-5 rounded shadow p-2 mt-5
                 tab-pane fade show active" id="missionsView">
 
-            <h2 class="text-center m-4">Missions Overview</h2>
+            <div class="d-flex align-items-center justify-content-center position-relative">
+                <h2 class="m-4">Missions Overview</h2>
+
+                <button id="addMissionBtn" class="btn btn-outline-primary rounded-circle position-absolute end-0 me-3">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+
             <div class="alert alert-info">
                 <i class="bi bi-info-circle me-2"></i>
                 <span id="missionsAmount"></span> mission(s) currently in progress

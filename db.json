@@ -6,7 +6,7 @@
       "registry": "NCC-1701-D",
       "class": "Galaxy",
       "captain": "Jean-Luc Picard",
-      "status": "mission",
+      "status": "available",
       "sector": "Alpha Quadrant",
       "crewSize": 1012,
       "image": "enterprise.jpg",
@@ -15,7 +15,7 @@
         "photonTorpedos": 250,
         "quantumTorpedos": 0
       },
-      "missionId": 1,
+      "missionId": null,
       "completedMissions": 47,
       "description": "USS Enterprise-D is a Galaxy-class starship renowned for its exploration and diplomatic missions under Captain Jean-Luc Picard. The crew excels in science, diplomacy, and tactical strategy, with First Officer William Riker providing exceptional leadership and Lt. Commander Data offering unparalleled computational and technical expertise. The Enterprise's diverse crew and advanced facilities make it highly adaptable to both combat and delicate negotiation scenarios."
     },
@@ -25,7 +25,7 @@
       "registry": "NX-74205",
       "class": "Defiant",
       "captain": "Benjamin Sisko",
-      "status": "mission",
+      "status": "available",
       "sector": "Deep Space 9",
       "crewSize": 50,
       "image": "defiant.jpg",
@@ -34,7 +34,7 @@
         "photonTorpedos": 0,
         "quantumTorpedos": 48
       },
-      "missionId": 5,
+      "missionId": null,
       "completedMissions": 31,
       "description": "USS Defiant is a compact but powerful warship optimized for rapid response and deep-space combat. Under Captain Benjamin Sisko, the crew demonstrates unmatched tactical coordination, resilience, and ingenuity, often operating under high-pressure scenarios during the Dominion War. Chief O'Brien ensures mechanical reliability, while Kira Nerys offers strategic and diplomatic insight, making the Defiant capable of facing overwhelming odds while maintaining crew cohesion and mission focus."
     },
@@ -44,7 +44,7 @@
       "registry": "NCC-74656",
       "class": "Intrepid",
       "captain": "Kathryn Janeway",
-      "status": "mission",
+      "status": "available",
       "sector": "Delta Quadrant",
       "crewSize": 141,
       "image": "voyager.jpg",
@@ -53,7 +53,7 @@
         "photonTorpedos": 38,
         "quantumTorpedos": 0
       },
-      "missionId": 7,
+      "missionId": null,
       "completedMissions": 22,
       "description": "USS Voyager is an Intrepid-class vessel stranded in the distant Delta Quadrant, commanded by Captain Kathryn Janeway, whose leadership combines scientific curiosity with unwavering determination. The crew is diverse and highly skilled: Chakotay provides exceptional tactical insight, Tuvok ensures security and discipline, and Seven of Nine contributes advanced Borg technology expertise. Voyager's crew is known for resilience, resourcefulness, and teamwork, navigating unknown space while maintaining morale and exploring new civilizations."
     },
@@ -196,7 +196,7 @@
       "registry": "NCC-1647",
       "class": "Constitution",
       "captain": "T'Varell",
-      "status": "mission",
+      "status": "available",
       "sector": "Alpha Quadrant",
       "crewSize": 430,
       "image": "farragut.jpg",
@@ -205,7 +205,7 @@
         "photonTorpedos": 90,
         "quantumTorpedos": 0
       },
-      "missionId": 2,
+      "missionId": null,
       "completedMissions": 20,
       "description": "USS Farragut, a Constitution-class vessel, is commanded by the Vulcan Captain T'Varell, known for precise decision-making and logical strategic planning. The crew is highly disciplined and excels in scientific research, deep-space navigation, and tactical simulations. First Officer S'Rahn specializes in diplomacy and xenolinguistics, making the Farragut effective in first-contact scenarios and interstellar negotiations."
     },
@@ -236,8 +236,8 @@
       "description": "Patrol along the Neutral Zone near the Romulan border, observing suspicious activities and gathering intelligence while ensuring diplomatic protocols are maintained.",
       "sector": "Neutral Zone",
       "difficulty": "easy",
-      "status": "in progress",
-      "shipId": 1,
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 2,
       "dispatchedAt": null
     },
@@ -247,8 +247,8 @@
       "description": "Establish peaceful communication with a newly discovered species and document cultural and technological information, ensuring safe and respectful interaction.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "in progress",
-      "shipId": 11,
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 5,
       "dispatchedAt": null
     },
@@ -280,8 +280,8 @@
       "description": "Engage in diplomatic talks to negotiate a ceasefire agreement, leveraging negotiation skills, cultural knowledge, and strategic planning to reach a peaceful resolution.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "in progress",
-      "shipId": 2,
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 5,
       "dispatchedAt": null
     },
@@ -302,8 +302,8 @@
       "description": "Investigate a faint energy signature resembling Ocampa technology, locate the source, and determine if any survivors or relics remain.",
       "sector": "Delta Quadrant",
       "difficulty": "easy",
-      "status": "in progress",
-      "shipId": 3,
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 2,
       "dispatchedAt": null
     },

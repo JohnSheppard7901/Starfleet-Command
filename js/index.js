@@ -2,6 +2,10 @@ const shipsContainer = document.getElementById("shipsContainer");
 const missionTableBody = document.getElementById("missionTableBody"); 
 const missionsAmount = document.getElementById("missionsAmount");
 
+document.getElementById('addMissionBtn').addEventListener('click', function() {
+    window.location.href = 'new-mission.html';
+});
+
 let ships = [];
 let missions = [];
 
@@ -202,11 +206,11 @@ function queryAndSetDispatchModalElements(mission){
     oldBtn.replaceWith(modalConfirmDispatchBtn);
 
     modalConfirmDispatchBtn.addEventListener("click", (e) => {
-        const selectedShipId = document.getElementById("dispatchModalSelect").value;
-        const shipId = parseInt(selectedShipId);
-        const missionId = parseInt(mission.id);
+        const shipId = document.getElementById("dispatchModalSelect").value;
+        const missionId = mission.id;
         patchMissionData(shipId, missionId);
         patchShipData(shipId, missionId);
+        closeModalAndReloadPage();
     });
 }
 
@@ -224,12 +228,11 @@ async function patchMissionData(shipId, missionId){
     const updatedMission = await response.json();
 }
 
-
 async function patchShipData(shipId, missionId) {
     const response = await fetch(`http://localhost:3001/ships/${shipId}`, {
         method: "PATCH",
         headers: {
-            "Content-Type": "applications/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             status: "mission",
@@ -240,3 +243,6 @@ async function patchShipData(shipId, missionId) {
     const updatedShip = await response.json();
 }
 
+function closeModalAndReloadPage(){
+    window.location.reload();
+}
