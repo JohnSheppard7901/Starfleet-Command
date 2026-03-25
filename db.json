@@ -6,7 +6,7 @@
       "registry": "NCC-1701-D",
       "class": "Galaxy",
       "captain": "Jean-Luc Picard",
-      "status": "available",
+      "status": "mission",
       "sector": "Alpha Quadrant",
       "crewSize": 1012,
       "image": "enterprise.jpg",
@@ -15,7 +15,7 @@
         "photonTorpedos": 250,
         "quantumTorpedos": 0
       },
-      "missionId": null,
+      "missionId": "2",
       "completedMissions": 47,
       "description": "USS Enterprise-D is a Galaxy-class starship renowned for its exploration and diplomatic missions under Captain Jean-Luc Picard. The crew excels in science, diplomacy, and tactical strategy, with First Officer William Riker providing exceptional leadership and Lt. Commander Data offering unparalleled computational and technical expertise. The Enterprise's diverse crew and advanced facilities make it highly adaptable to both combat and delicate negotiation scenarios."
     },
@@ -44,7 +44,7 @@
       "registry": "NCC-74656",
       "class": "Intrepid",
       "captain": "Kathryn Janeway",
-      "status": "available",
+      "status": "mission",
       "sector": "Delta Quadrant",
       "crewSize": 141,
       "image": "voyager.jpg",
@@ -53,7 +53,7 @@
         "photonTorpedos": 38,
         "quantumTorpedos": 0
       },
-      "missionId": null,
+      "missionId": "1",
       "completedMissions": 22,
       "description": "USS Voyager is an Intrepid-class vessel stranded in the distant Delta Quadrant, commanded by Captain Kathryn Janeway, whose leadership combines scientific curiosity with unwavering determination. The crew is diverse and highly skilled: Chakotay provides exceptional tactical insight, Tuvok ensures security and discipline, and Seven of Nine contributes advanced Borg technology expertise. Voyager's crew is known for resilience, resourcefulness, and teamwork, navigating unknown space while maintaining morale and exploring new civilizations."
     },
@@ -236,8 +236,8 @@
       "description": "Patrol along the Neutral Zone near the Romulan border, observing suspicious activities and gathering intelligence while ensuring diplomatic protocols are maintained.",
       "sector": "Neutral Zone",
       "difficulty": "easy",
-      "status": "pending",
-      "shipId": null,
+      "status": "in progress",
+      "shipId": "3",
       "durationMinutes": 2,
       "dispatchedAt": null
     },
@@ -247,8 +247,8 @@
       "description": "Establish peaceful communication with a newly discovered species and document cultural and technological information, ensuring safe and respectful interaction.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "pending",
-      "shipId": null,
+      "status": "in progress",
+      "shipId": "1",
       "durationMinutes": 5,
       "dispatchedAt": null
     },

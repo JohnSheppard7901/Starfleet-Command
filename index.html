@@ -52,6 +52,40 @@
                 <span id="missionsAmount"></span> mission(s) currently in progress
             </div>
 
+            <div class="row g-2 align-items-center mb-3">
+                <span><strong>Filter:</strong></span>
+                <!-- Filter by mission name -->
+                <div class="col-md-4">
+                    <input type="text" id="searchMission" class="form-control" placeholder="Search mission...">
+                </div>
+
+                <!-- Filter by difficulty -->
+                <div class="col-md-3">
+                    <select id="filterDifficulty" class="form-select">
+                        <option value="">Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <!-- Filter by status -->
+                <div class="col-md-3">
+                    <select id="filterStatus" class="form-select">
+                        <option value="">Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="in progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+
+                <!-- Reset Filter Button -->
+                <div class="col-md-2">
+                    <button id="resetFilterBtn" class="btn btn-outline-secondary w-100">Reset</button>
+                </div>
+
+            </div>
+
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
                     <thead class="table-dark">

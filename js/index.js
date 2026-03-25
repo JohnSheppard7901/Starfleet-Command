@@ -1,13 +1,21 @@
 const shipsContainer = document.getElementById("shipsContainer");
 const missionTableBody = document.getElementById("missionTableBody"); 
 const missionsAmount = document.getElementById("missionsAmount");
+const dispatchShipsModal = document.getElementById("dispatchShipsModal");
 
 document.getElementById('addMissionBtn').addEventListener('click', function() {
     window.location.href = 'new-mission.html';
 });
 
+const searchMission = document.getElementById("searchMission");
+const filterStatus = document.getElementById("filterStatus");
+const filterDifficulty = document.getElementById("filterDifficulty");
+const resetFilterBtn = document.getElementById("resetFilterBtn");
+
+
 let ships = [];
 let missions = [];
+let filteredMissions = [];
 
 loadShips();
 loadMissions();
@@ -91,8 +99,9 @@ function queryAndSetDetailsModalElements(ship){
 async function loadMissions() {
     const response = await fetch("http://localhost:3001/missions");
     missions = await response.json();
+    filteredMissions = missions;
     getMissionsInProgressAmount(missions);
-    renderMissions(missions);
+    renderMissions(filteredMissions);
 }
 
 async function renderMissions(missions){ 
@@ -119,7 +128,7 @@ async function renderMissions(missions){
             statusColor = "text-bg-secondary";
         }
 
-        // set ship name or empty
+        // set ship name or empty, create dispatch btn
         if(mission.shipId === null){
             assignedShip = "";
             dispatchBtn = `<button class="btn btn-sm btn-outline-danger"
@@ -141,6 +150,7 @@ async function renderMissions(missions){
             difficultyColor = "text-bg-danger";
         }
 
+        // create new row with data
         return `
             <tr>
                 <td>${mission.name}</td>
@@ -156,13 +166,15 @@ async function renderMissions(missions){
             </tr>
         `;
     }));
+
+    // add all created rows to table
     missionTableBody.innerHTML = allTableRows.join("");
+
+    // add EventListener to every Dispatch btn, find corresponding mission, set modal
     document.querySelectorAll("[data-mission-id]").forEach((btn) => {
         btn.addEventListener("click", (e) => {
             const missionId = e.target.dataset.missionId;
             const mission = missions.find(m => m.id === missionId);
-            console.log(missionId);
-            console.log(mission);
 
             queryAndSetDispatchModalElements(mission);
         });
@@ -181,7 +193,7 @@ async function getShipById(shipId) {
     return ship.name;
 }
 
-
+// set fields of Dispatch modal
 function queryAndSetDispatchModalElements(mission){
     //set name and description
     document.getElementById("dispatchModalMissionName").value = mission.name;
@@ -205,12 +217,20 @@ function queryAndSetDispatchModalElements(mission){
     const modalConfirmDispatchBtn = oldBtn.cloneNode(true);
     oldBtn.replaceWith(modalConfirmDispatchBtn);
 
-    modalConfirmDispatchBtn.addEventListener("click", (e) => {
+    modalConfirmDispatchBtn.addEventListener("click", async (e) => {
         const shipId = document.getElementById("dispatchModalSelect").value;
         const missionId = mission.id;
-        patchMissionData(shipId, missionId);
-        patchShipData(shipId, missionId);
-        closeModalAndReloadPage();
+
+        if(shipId === ""){
+            await reloadDataAfterDispatch();
+            return;
+        }
+
+        await Promise.all([
+            patchMissionData(shipId, missionId),
+            patchShipData(shipId, missionId)
+        ]);        
+        await reloadDataAfterDispatch();
     });
 }
 
@@ -243,6 +263,53 @@ async function patchShipData(shipId, missionId) {
     const updatedShip = await response.json();
 }
 
-function closeModalAndReloadPage(){
-    window.location.reload();
+async function reloadDataAfterDispatch() {
+    let modal = bootstrap.Modal.getInstance(dispatchShipsModal) || new bootstrap.Modal(dispatchShipsModal);
+    modal.hide();
+
+    await loadShips();
+    await loadMissions();
+    applyFilters();
 }
+
+// Filter
+filterStatus.addEventListener("input", () => { 
+    applyFilters();
+});
+
+filterDifficulty.addEventListener("input", () => {
+    applyFilters();
+});
+
+searchMission.addEventListener("input", () => {
+    applyFilters();
+});
+
+function applyFilters() {
+    let status = filterStatus.value;
+    let difficulty = filterDifficulty.value;
+    let searchValue = searchMission.value;
+
+    let result = missions;
+
+    if(status !== "")
+        result = result.filter(m => m.status === status);
+
+    if(difficulty !== "")
+        result = result.filter(m => m.difficulty === difficulty);
+
+    if(searchValue !== "" && searchValue !== " "){
+        result = result.filter(m => m.name.toLowerCase().includes(searchValue.toLowerCase()));
+    }
+    filteredMissions = result;
+    renderMissions(result);
+}
+
+// reset btn to reset all filters
+resetFilterBtn.addEventListener("click", () => {
+    filteredMissions = missions;
+    filterStatus.value = "";
+    filterDifficulty.value = "";
+    searchMission.value = "";
+    renderMissions(filteredMissions);
+});
