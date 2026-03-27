@@ -25,7 +25,7 @@
       "registry": "NX-74205",
       "class": "Defiant",
       "captain": "Benjamin Sisko",
-      "status": "available",
+      "status": "mission",
       "sector": "Deep Space 9",
       "crewSize": 50,
       "image": "defiant.jpg",
@@ -34,7 +34,7 @@
         "photonTorpedos": 0,
         "quantumTorpedos": 48
       },
-      "missionId": null,
+      "missionId": "3",
       "completedMissions": 31,
       "description": "USS Defiant is a compact but powerful warship optimized for rapid response and deep-space combat. Under Captain Benjamin Sisko, the crew demonstrates unmatched tactical coordination, resilience, and ingenuity, often operating under high-pressure scenarios during the Dominion War. Chief O'Brien ensures mechanical reliability, while Kira Nerys offers strategic and diplomatic insight, making the Defiant capable of facing overwhelming odds while maintaining crew cohesion and mission focus."
     },
@@ -63,7 +63,7 @@
       "registry": "NCC-80102",
       "class": "Luna",
       "captain": "William Riker",
-      "status": "available",
+      "status": "mission",
       "sector": "Alpha Quadrant",
       "crewSize": 350,
       "image": "titan.jpg",
@@ -72,7 +72,7 @@
         "photonTorpedos": 100,
         "quantumTorpedos": 25
       },
-      "missionId": null,
+      "missionId": "1",
       "completedMissions": 15,
       "description": "USS Titan, a Luna-class starship, is led by Captain William Riker. Known for fostering a collaborative and adaptive crew environment, Titan excels in scientific research and diplomacy. First Officer Deanna Troi provides invaluable psychological support and negotiation skills, while the engineering and tactical teams consistently display innovation and precision. The Titan often undertakes complex exploratory missions that require a blend of tactical readiness and cultural sensitivity."
     },
@@ -82,7 +82,7 @@
       "registry": "NCC-72381",
       "class": "Nova",
       "captain": "Rudolph Ransom",
-      "status": "available",
+      "status": "mission",
       "sector": "Alpha Quadrant",
       "crewSize": 78,
       "image": "equinox.jpg",
@@ -91,7 +91,7 @@
         "photonTorpedos": 40,
         "quantumTorpedos": 0
       },
-      "missionId": null,
+      "missionId": "2",
       "completedMissions": 8,
       "description": "USS Equinox is a Nova-class vessel with a small but specialized crew led by Captain Rudolph Ransom. The ship emphasizes adaptability and efficiency, with crew members trained in both scientific research and rapid-response problem solving. The Equinox team excels in quick decision-making under pressure and is skilled at navigating complex or hazardous environments, although their small size demands careful coordination and resource management."
     },
@@ -120,7 +120,7 @@
       "registry": "NCC-63549",
       "class": "Akira",
       "captain": "Valeria Thorne",
-      "status": "available",
+      "status": "mission",
       "sector": "Gamma Quadrant",
       "crewSize": 500,
       "image": "thunderchild.jpg",
@@ -129,7 +129,7 @@
         "photonTorpedos": 300,
         "quantumTorpedos": 50
       },
-      "missionId": null,
+      "missionId": "4",
       "completedMissions": 19,
       "description": "USS Thunderchild, an Akira-class vessel, is commanded by Captain Valeria Thorne, whose leadership is defined by strategic insight and decisiveness. The crew is highly trained in coordinated operations and deep-space tactical maneuvers. First Officer Ral K'Tar specializes in intelligence and reconnaissance, making the Thunderchild a formidable force in both exploratory missions and combat scenarios. Crew morale and discipline are emphasized to handle the demands of the Gamma Quadrant."
     },
@@ -158,7 +158,7 @@
       "registry": "NCC-71099",
       "class": "Galaxy",
       "captain": "Geordi La Forge",
-      "status": "available",
+      "status": "mission",
       "sector": "Alpha Quadrant",
       "crewSize": 1000,
       "image": "challenger.jpg",
@@ -167,7 +167,7 @@
         "photonTorpedos": 200,
         "quantumTorpedos": 50
       },
-      "missionId": null,
+      "missionId": "3",
       "completedMissions": 35,
       "description": "USS Challenger is a Galaxy-class starship led by Captain Geordi La Forge, whose technical expertise ensures operational efficiency. The crew excels in engineering, tactical systems management, and scientific exploration. La Forge's leadership emphasizes creative problem solving and adaptability, making the Challenger a vessel capable of responding effectively to both first-contact scenarios and unexpected crises."
     },
@@ -187,7 +187,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 14,
+      "completedMissions": 15,
       "description": "USS Columbia, an early NX-class starship, is under Captain Erika Hernandez. The small crew is highly versatile, capable of scientific research, exploration, and tactical support. First Officer Lin provides specialized expertise in warp engineering and sensor analysis. Columbia is particularly effective in short-range missions where adaptability and precision are critical."
     },
     {
@@ -196,7 +196,7 @@
       "registry": "NCC-1647",
       "class": "Constitution",
       "captain": "T'Varell",
-      "status": "available",
+      "status": "mission",
       "sector": "Alpha Quadrant",
       "crewSize": 430,
       "image": "farragut.jpg",
@@ -205,7 +205,7 @@
         "photonTorpedos": 90,
         "quantumTorpedos": 0
       },
-      "missionId": null,
+      "missionId": "3",
       "completedMissions": 20,
       "description": "USS Farragut, a Constitution-class vessel, is commanded by the Vulcan Captain T'Varell, known for precise decision-making and logical strategic planning. The crew is highly disciplined and excels in scientific research, deep-space navigation, and tactical simulations. First Officer S'Rahn specializes in diplomacy and xenolinguistics, making the Farragut effective in first-contact scenarios and interstellar negotiations."
     },
@@ -236,10 +236,10 @@
       "description": "Patrol along the Neutral Zone near the Romulan border, observing suspicious activities and gathering intelligence while ensuring diplomatic protocols are maintained.",
       "sector": "Neutral Zone",
       "difficulty": "easy",
-      "status": "in progress",
-      "shipId": "3",
-      "durationMinutes": 2,
-      "dispatchedAt": null
+      "status": "completed",
+      "shipId": null,
+      "durationMinutes": 1,
+      "dispatchedAt": 1774631310522
     },
     {
       "id": "2",
@@ -247,10 +247,10 @@
       "description": "Establish peaceful communication with a newly discovered species and document cultural and technological information, ensuring safe and respectful interaction.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "in progress",
-      "shipId": "1",
-      "durationMinutes": 5,
-      "dispatchedAt": null
+      "status": "completed",
+      "shipId": null,
+      "durationMinutes": 1,
+      "dispatchedAt": 1774631901753
     },
     {
       "id": "3",
@@ -258,10 +258,10 @@
       "description": "Track and analyze a Borg vessel in the Delta Quadrant, collecting movement data and returning safely without direct engagement. Crew must rely on sensor expertise and evasive maneuvers.",
       "sector": "Delta Quadrant",
       "difficulty": "hard",
-      "status": "pending",
+      "status": "completed",
       "shipId": null,
-      "durationMinutes": 10,
-      "dispatchedAt": null
+      "durationMinutes": 1,
+      "dispatchedAt": 1774632539510
     },
     {
       "id": "4",
@@ -271,7 +271,7 @@
       "difficulty": "easy",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 2,
+      "durationMinutes": 1,
       "dispatchedAt": null
     },
     {
@@ -282,7 +282,7 @@
       "difficulty": "medium",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 5,
+      "durationMinutes": 1,
       "dispatchedAt": null
     },
     {
@@ -324,7 +324,7 @@
       "description": "Chart unexplored regions, documenting safe passage, resources, and hazards for future missions. Navigation and scientific analysis are critical for mission success.",
       "sector": "Delta Quadrant",
       "difficulty": "medium",
-      "status": "pending",
+      "status": "completed",
       "shipId": null,
       "durationMinutes": 5,
       "dispatchedAt": null
@@ -346,7 +346,7 @@
       "description": "Evacuate stranded refugees from a dangerous area and provide temporary shelter, demonstrating efficiency, compassion, and resource coordination.",
       "sector": "Delta Quadrant",
       "difficulty": "easy",
-      "status": "pending",
+      "status": "completed",
       "shipId": null,
       "durationMinutes": 2,
       "dispatchedAt": null

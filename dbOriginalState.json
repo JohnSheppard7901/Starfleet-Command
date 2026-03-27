@@ -16,7 +16,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 47,
+      "completedMissions": 0,
       "description": "USS Enterprise-D is a Galaxy-class starship renowned for its exploration and diplomatic missions under Captain Jean-Luc Picard. The crew excels in science, diplomacy, and tactical strategy, with First Officer William Riker providing exceptional leadership and Lt. Commander Data offering unparalleled computational and technical expertise. The Enterprise's diverse crew and advanced facilities make it highly adaptable to both combat and delicate negotiation scenarios."
     },
     {
@@ -35,7 +35,7 @@
         "quantumTorpedos": 48
       },
       "missionId": null,
-      "completedMissions": 31,
+      "completedMissions": 0,
       "description": "USS Defiant is a compact but powerful warship optimized for rapid response and deep-space combat. Under Captain Benjamin Sisko, the crew demonstrates unmatched tactical coordination, resilience, and ingenuity, often operating under high-pressure scenarios during the Dominion War. Chief O'Brien ensures mechanical reliability, while Kira Nerys offers strategic and diplomatic insight, making the Defiant capable of facing overwhelming odds while maintaining crew cohesion and mission focus."
     },
     {
@@ -54,7 +54,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 22,
+      "completedMissions": 0,
       "description": "USS Voyager is an Intrepid-class vessel stranded in the distant Delta Quadrant, commanded by Captain Kathryn Janeway, whose leadership combines scientific curiosity with unwavering determination. The crew is diverse and highly skilled: Chakotay provides exceptional tactical insight, Tuvok ensures security and discipline, and Seven of Nine contributes advanced Borg technology expertise. Voyager's crew is known for resilience, resourcefulness, and teamwork, navigating unknown space while maintaining morale and exploring new civilizations."
     },
     {
@@ -73,7 +73,7 @@
         "quantumTorpedos": 25
       },
       "missionId": null,
-      "completedMissions": 15,
+      "completedMissions": 0,
       "description": "USS Titan, a Luna-class starship, is led by Captain William Riker. Known for fostering a collaborative and adaptive crew environment, Titan excels in scientific research and diplomacy. First Officer Deanna Troi provides invaluable psychological support and negotiation skills, while the engineering and tactical teams consistently display innovation and precision. The Titan often undertakes complex exploratory missions that require a blend of tactical readiness and cultural sensitivity."
     },
     {
@@ -92,7 +92,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 8,
+      "completedMissions": 0,
       "description": "USS Equinox is a Nova-class vessel with a small but specialized crew led by Captain Rudolph Ransom. The ship emphasizes adaptability and efficiency, with crew members trained in both scientific research and rapid-response problem solving. The Equinox team excels in quick decision-making under pressure and is skilled at navigating complex or hazardous environments, although their small size demands careful coordination and resource management."
     },
     {
@@ -111,7 +111,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 63,
+      "completedMissions": 0,
       "description": "USS Excelsior, under Captain Hikaru Sulu, is a versatile starship with a crew skilled in exploration, diplomacy, and tactical operations. The Excelsior team is recognized for its high morale, cohesion, and adaptability, capable of undertaking extended missions across the Beta Quadrant. Crew members specialize in advanced navigation, science, and first-contact scenarios, making the ship an essential asset in both peaceful and conflict situations."
     },
     {
@@ -130,7 +130,7 @@
         "quantumTorpedos": 50
       },
       "missionId": null,
-      "completedMissions": 19,
+      "completedMissions": 0,
       "description": "USS Thunderchild, an Akira-class vessel, is commanded by Captain Valeria Thorne, whose leadership is defined by strategic insight and decisiveness. The crew is highly trained in coordinated operations and deep-space tactical maneuvers. First Officer Ral K'Tar specializes in intelligence and reconnaissance, making the Thunderchild a formidable force in both exploratory missions and combat scenarios. Crew morale and discipline are emphasized to handle the demands of the Gamma Quadrant."
     },
     {
@@ -149,7 +149,7 @@
         "quantumTorpedos": 80
       },
       "missionId": null,
-      "completedMissions": 28,
+      "completedMissions": 0,
       "description": "USS Aventine, a Vesta-class ship, is captained by Ezri Dax, whose empathetic leadership fosters a collaborative and innovative crew environment. The crew excels in scientific research, negotiation, and tactical coordination, often leveraging Ezri's insight to navigate complex situations diplomatically. Each department is highly competent, with engineering and tactical specialists providing rapid solutions during unexpected challenges."
     },
     {
@@ -168,7 +168,7 @@
         "quantumTorpedos": 50
       },
       "missionId": null,
-      "completedMissions": 35,
+      "completedMissions": 0,
       "description": "USS Challenger is a Galaxy-class starship led by Captain Geordi La Forge, whose technical expertise ensures operational efficiency. The crew excels in engineering, tactical systems management, and scientific exploration. La Forge's leadership emphasizes creative problem solving and adaptability, making the Challenger a vessel capable of responding effectively to both first-contact scenarios and unexpected crises."
     },
     {
@@ -187,7 +187,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 14,
+      "completedMissions": 0,
       "description": "USS Columbia, an early NX-class starship, is under Captain Erika Hernandez. The small crew is highly versatile, capable of scientific research, exploration, and tactical support. First Officer Lin provides specialized expertise in warp engineering and sensor analysis. Columbia is particularly effective in short-range missions where adaptability and precision are critical."
     },
     {
@@ -206,7 +206,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 20,
+      "completedMissions": 0,
       "description": "USS Farragut, a Constitution-class vessel, is commanded by the Vulcan Captain T'Varell, known for precise decision-making and logical strategic planning. The crew is highly disciplined and excels in scientific research, deep-space navigation, and tactical simulations. First Officer S'Rahn specializes in diplomacy and xenolinguistics, making the Farragut effective in first-contact scenarios and interstellar negotiations."
     },
     {
@@ -225,7 +225,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 24,
+      "completedMissions": 0,
       "description": "USS Cayuga, Constitution-class starship, is under the leadership of Captain Marie Batel. The crew is highly capable in both exploration and tactical missions. Batel encourages strong teamwork and situational adaptability, with specialized officers excelling in communications, first-contact protocols, and rapid tactical planning. The ship operates efficiently in both scientific and security missions."
     }
   ],
@@ -260,7 +260,7 @@
       "difficulty": "hard",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 10,
+      "durationMinutes": 7,
       "dispatchedAt": null
     },
     {
@@ -282,7 +282,7 @@
       "difficulty": "medium",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 5,
+      "durationMinutes": 4,
       "dispatchedAt": null
     },
     {
@@ -293,7 +293,7 @@
       "difficulty": "medium",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 5,
+      "durationMinutes": 4,
       "dispatchedAt": null
     },
     {
@@ -304,7 +304,7 @@
       "difficulty": "easy",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 2,
+      "durationMinutes": 1,
       "dispatchedAt": null
     },
     {
@@ -315,7 +315,7 @@
       "difficulty": "hard",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 10,
+      "durationMinutes": 7,
       "dispatchedAt": null
     },
     {
@@ -359,7 +359,7 @@
       "difficulty": "hard",
       "status": "pending",
       "shipId": null,
-      "durationMinutes": 10,
+      "durationMinutes": 8,
       "dispatchedAt": null
     },
     {

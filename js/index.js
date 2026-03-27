@@ -19,6 +19,7 @@ let filteredMissions = [];
 
 loadShips();
 loadMissions();
+setInterval(checkMissionsComplete, 10000); // alle 10 Sekunden
 
 
 // SHIPS 
@@ -102,6 +103,7 @@ async function loadMissions() {
     filteredMissions = missions;
     getMissionsInProgressAmount(missions);
     renderMissions(filteredMissions);
+    checkMissionsComplete();
 }
 
 async function renderMissions(missions){ 
@@ -129,13 +131,16 @@ async function renderMissions(missions){
         }
 
         // set ship name or empty, create dispatch btn
-        if(mission.shipId === null){
+        if(mission.shipId === null && mission.status !== "completed"){
             assignedShip = "";
             dispatchBtn = `<button class="btn btn-sm btn-outline-danger"
                                 data-bs-toggle="modal"
                                 data-bs-target="#dispatchShipsModal"
                                 data-mission-id="${mission.id}"
                             >Dispatch</button>`;
+        }else if(mission.shipId === null && mission.status === "completed"){
+            assignedShip = "";
+            dispatchBtn = "";
         }else{
             assignedShip = await getShipById(mission.shipId);
             dispatchBtn = "";
@@ -188,9 +193,9 @@ function getMissionsInProgressAmount(missions){
 }
 
 async function getShipById(shipId) {
-    const response = await fetch(`http://localhost:3001/ships/${shipId}`);
-    const ship = await response.json();
-    return ship.name;
+    const ship = ships.find(s => s.id === shipId);
+    if(ship)
+        return ship.name;
 }
 
 // set fields of Dispatch modal
@@ -276,15 +281,54 @@ async function reloadDataAfterDispatch() {
 //check for finished missions
 function checkMissionsComplete(){
     let finishedMissions = missions.filter(m => m.status === "in progress");
-    finishedMissions.forEach((m) => {
+    finishedMissions.forEach(async (m) => {
+        console.log("Checking mission, 10 Sek passed");
 
         if(Date.now() - m.dispatchedAt >= m.durationMinutes * 60 * 1000){
-           console.log("Abgelaufene Mission: ", m.name); 
-        }
-        
-    });
+            console.log("dispatchedAt:", m.dispatchedAt);
+            console.log("duration:", m.durationMinutes);
+            console.log("Differenz in Minuten:", (Date.now() - m.dispatchedAt) / 60000);
+            console.log("Abgelaufene Mission: ", m.name); 
 
+            await patchMissionDataCompleted(m.id);            
+            await patchShipDataCompleted(m.shipId);
+            await loadMissions();
+            await loadShips();
+            applyFilters();
+        }
+    });
 }
+
+async function patchMissionDataCompleted(missionId){
+    const result = await fetch(`http://localhost:3001/missions/${missionId}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            status: "completed",
+            shipId: null
+        })
+    });
+    return result;
+}
+
+async function patchShipDataCompleted(shipId){
+    const result = await fetch(`http://localhost:3001/ships/${shipId}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            status: "available",
+            missionId: null,
+            completedMissions: ships.find(s => s.id === shipId).completedMissions + 1
+        })
+    });
+    return result;
+}
+
+
 
 // Filter
 filterStatus.addEventListener("input", () => { 
