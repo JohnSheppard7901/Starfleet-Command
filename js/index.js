@@ -242,7 +242,8 @@ async function patchMissionData(shipId, missionId){
         },
         body: JSON.stringify({
             status: "in progress",
-            shipId: shipId
+            shipId: shipId,
+            dispatchedAt: Date.now()
         })
     });
     const updatedMission = await response.json();
@@ -270,6 +271,19 @@ async function reloadDataAfterDispatch() {
     await loadShips();
     await loadMissions();
     applyFilters();
+}
+
+//check for finished missions
+function checkMissionsComplete(){
+    let finishedMissions = missions.filter(m => m.status === "in progress");
+    finishedMissions.forEach((m) => {
+
+        if(Date.now() - m.dispatchedAt >= m.durationMinutes * 60 * 1000){
+           console.log("Abgelaufene Mission: ", m.name); 
+        }
+        
+    });
+
 }
 
 // Filter
