@@ -289,12 +289,16 @@ function checkMissionsComplete(){
             console.log("duration:", m.durationMinutes);
             console.log("Differenz in Minuten:", (Date.now() - m.dispatchedAt) / 60000);
             console.log("Abgelaufene Mission: ", m.name); 
+            const shipName = ships.find(s => s.id === m.shipId)?.name;
+            console.log(shipName);
 
             await patchMissionDataCompleted(m.id);            
             await patchShipDataCompleted(m.shipId);
             await loadMissions();
             await loadShips();
             applyFilters();
+            console.log("Rufe showToast auf mit:", shipName, m.name);
+            showToast(shipName, m.name);
         }
     });
 }
@@ -328,9 +332,25 @@ async function patchShipDataCompleted(shipId){
     return result;
 }
 
+// show toast when mission is completed
+function showToast(shipName, missionName){
+    const toastContainer = document.getElementById("toastContainer");
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+    toast.innerHTML = 
+        `<div class="toast-body bg-success">
+        <div><strong>Mission Completed</strong></div>
+        <p>${shipName} has succssfully completed the mission ${missionName}.</p>
+        </div>`;
+
+    toastContainer.appendChild(toast);
+    const bsToast = new bootstrap.Toast(toast, { delay: 7000 });
+    bsToast.show();
+}
 
 
-// Filter
+
+// FILTER
 filterStatus.addEventListener("input", () => { 
     applyFilters();
 });

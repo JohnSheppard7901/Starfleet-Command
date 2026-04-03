@@ -3,5 +3,8 @@
 
     "liveServer.settings.ignoreFiles": [
         "**/db.json"
-    ]
+    ],
+
+    "github.copilot.enable": false,
+    "editor.inlineSuggest.enabled": false
 }
