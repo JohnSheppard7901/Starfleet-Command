@@ -284,9 +284,10 @@ function checkMissionsComplete(){
     finishedMissions.forEach(async (m) => {
         console.log("Checking mission, 10 Sek passed");
 
-        if(Date.now() - m.dispatchedAt >= m.durationMinutes * 60 * 1000){
+        let duration = parseInt(m.durationMinutes);
+        if(Date.now() - m.dispatchedAt >= duration * 60 * 1000){
             console.log("dispatchedAt:", m.dispatchedAt);
-            console.log("duration:", m.durationMinutes);
+            console.log("duration:", duration);
             console.log("Differenz in Minuten:", (Date.now() - m.dispatchedAt) / 60000);
             console.log("Abgelaufene Mission: ", m.name); 
             const shipName = ships.find(s => s.id === m.shipId)?.name;

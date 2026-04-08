@@ -1,5 +1,5 @@
 {
-  "ships": [
+    "ships": [
     {
       "id": "1",
       "name": "USS Enterprise",
@@ -16,7 +16,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 2,
+      "completedMissions": 0,
       "description": "USS Enterprise-D is a Galaxy-class starship renowned for its exploration and diplomatic missions under Captain Jean-Luc Picard. The crew excels in science, diplomacy, and tactical strategy, with First Officer William Riker providing exceptional leadership and Lt. Commander Data offering unparalleled computational and technical expertise. The Enterprise's diverse crew and advanced facilities make it highly adaptable to both combat and delicate negotiation scenarios."
     },
     {
@@ -35,7 +35,7 @@
         "quantumTorpedos": 48
       },
       "missionId": null,
-      "completedMissions": 1,
+      "completedMissions": 0,
       "description": "USS Defiant is a compact but powerful warship optimized for rapid response and deep-space combat. Under Captain Benjamin Sisko, the crew demonstrates unmatched tactical coordination, resilience, and ingenuity, often operating under high-pressure scenarios during the Dominion War. Chief O'Brien ensures mechanical reliability, while Kira Nerys offers strategic and diplomatic insight, making the Defiant capable of facing overwhelming odds while maintaining crew cohesion and mission focus."
     },
     {
@@ -44,7 +44,7 @@
       "registry": "NCC-74656",
       "class": "Intrepid",
       "captain": "Kathryn Janeway",
-      "status": "mission",
+      "status": "available",
       "sector": "Delta Quadrant",
       "crewSize": 141,
       "image": "voyager.jpg",
@@ -53,7 +53,7 @@
         "photonTorpedos": 38,
         "quantumTorpedos": 0
       },
-      "missionId": "15",
+      "missionId": null,
       "completedMissions": 0,
       "description": "USS Voyager is an Intrepid-class vessel stranded in the distant Delta Quadrant, commanded by Captain Kathryn Janeway, whose leadership combines scientific curiosity with unwavering determination. The crew is diverse and highly skilled: Chakotay provides exceptional tactical insight, Tuvok ensures security and discipline, and Seven of Nine contributes advanced Borg technology expertise. Voyager's crew is known for resilience, resourcefulness, and teamwork, navigating unknown space while maintaining morale and exploring new civilizations."
     },
@@ -111,7 +111,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 1,
+      "completedMissions": 0,
       "description": "USS Excelsior, under Captain Hikaru Sulu, is a versatile starship with a crew skilled in exploration, diplomacy, and tactical operations. The Excelsior team is recognized for its high morale, cohesion, and adaptability, capable of undertaking extended missions across the Beta Quadrant. Crew members specialize in advanced navigation, science, and first-contact scenarios, making the ship an essential asset in both peaceful and conflict situations."
     },
     {
@@ -168,7 +168,7 @@
         "quantumTorpedos": 50
       },
       "missionId": null,
-      "completedMissions": 1,
+      "completedMissions": 0,
       "description": "USS Challenger is a Galaxy-class starship led by Captain Geordi La Forge, whose technical expertise ensures operational efficiency. The crew excels in engineering, tactical systems management, and scientific exploration. La Forge's leadership emphasizes creative problem solving and adaptability, making the Challenger a vessel capable of responding effectively to both first-contact scenarios and unexpected crises."
     },
     {
@@ -196,7 +196,7 @@
       "registry": "NCC-1647",
       "class": "Constitution",
       "captain": "T'Varell",
-      "status": "mission",
+      "status": "available",
       "sector": "Alpha Quadrant",
       "crewSize": 430,
       "image": "farragut.jpg",
@@ -205,7 +205,7 @@
         "photonTorpedos": 90,
         "quantumTorpedos": 0
       },
-      "missionId": "16",
+      "missionId": null,
       "completedMissions": 0,
       "description": "USS Farragut, a Constitution-class vessel, is commanded by the Vulcan Captain T'Varell, known for precise decision-making and logical strategic planning. The crew is highly disciplined and excels in scientific research, deep-space navigation, and tactical simulations. First Officer S'Rahn specializes in diplomacy and xenolinguistics, making the Farragut effective in first-contact scenarios and interstellar negotiations."
     },
@@ -225,7 +225,7 @@
         "quantumTorpedos": 0
       },
       "missionId": null,
-      "completedMissions": 2,
+      "completedMissions": 0,
       "description": "USS Cayuga, Constitution-class starship, is under the leadership of Captain Marie Batel. The crew is highly capable in both exploration and tactical missions. Batel encourages strong teamwork and situational adaptability, with specialized officers excelling in communications, first-contact protocols, and rapid tactical planning. The ship operates efficiently in both scientific and security missions."
     }
   ],
@@ -236,10 +236,10 @@
       "description": "Patrol along the Neutral Zone near the Romulan border, observing suspicious activities and gathering intelligence while ensuring diplomatic protocols are maintained.",
       "sector": "Neutral Zone",
       "difficulty": "easy",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 2,
-      "dispatchedAt": 1775211506618
+      "dispatchedAt": null
     },
     {
       "id": "2",
@@ -247,10 +247,10 @@
       "description": "Establish peaceful communication with a newly discovered species and document cultural and technological information, ensuring safe and respectful interaction.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 5,
-      "dispatchedAt": 1775211791822
+      "dispatchedAt": null
     },
     {
       "id": "3",
@@ -258,10 +258,10 @@
       "description": "Track and analyze a Borg vessel in the Delta Quadrant, collecting movement data and returning safely without direct engagement. Crew must rely on sensor expertise and evasive maneuvers.",
       "sector": "Delta Quadrant",
       "difficulty": "hard",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 7,
-      "dispatchedAt": 1775211797875
+      "dispatchedAt": null
     },
     {
       "id": "4",
@@ -269,10 +269,10 @@
       "description": "Deliver critical medical and relief supplies after a natural disaster and assist with rebuilding infrastructure, demonstrating coordination, resource management, and diplomacy.",
       "sector": "Alpha Quadrant",
       "difficulty": "easy",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 2,
-      "dispatchedAt": 1775212039231
+      "dispatchedAt": null
     },
     {
       "id": "5",
@@ -280,10 +280,10 @@
       "description": "Engage in diplomatic talks to negotiate a ceasefire agreement, leveraging negotiation skills, cultural knowledge, and strategic planning to reach a peaceful resolution.",
       "sector": "Gamma Quadrant",
       "difficulty": "medium",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 4,
-      "dispatchedAt": 1775212164870
+      "dispatchedAt": null
     },
     {
       "id": "6",
@@ -291,10 +291,10 @@
       "description": "Investigate a spatial-temporal anomaly, collect samples, analyze its origin, and assess potential threats, requiring scientific precision and careful navigation.",
       "sector": "Alpha Quadrant",
       "difficulty": "medium",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 4,
-      "dispatchedAt": 1775212183655
+      "dispatchedAt": null
     },
     {
       "id": "7",
@@ -390,10 +390,10 @@
       "description": "Escort diplomats to a sensitive negotiation, ensuring their safety while facilitating communication and providing strategic support, requiring precision and coordination.",
       "sector": "Alpha Quadrant",
       "difficulty": "medium",
-      "status": "in progress",
-      "shipId": "3",
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 5,
-      "dispatchedAt": 1775212627836
+      "dispatchedAt": null
     },
     {
       "id": "16",
@@ -401,10 +401,10 @@
       "description": "Investigate a previously unexplored nebula, collecting scientific data, mapping safe routes, and documenting unique phenomena. Crew expertise in navigation and astrophysics is essential.",
       "sector": "Beta Quadrant",
       "difficulty": "medium",
-      "status": "in progress",
-      "shipId": "11",
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 7,
-      "dispatchedAt": 1775212360183
+      "dispatchedAt": null
     },
     {
       "id": "17",
@@ -412,10 +412,10 @@
       "description": "Engage with an alien civilization to share knowledge and establish mutual understanding, promoting diplomatic relations and scientific collaboration.",
       "sector": "Alpha Quadrant",
       "difficulty": "easy",
-      "status": "completed",
+      "status": "pending",
       "shipId": null,
       "durationMinutes": 4,
-      "dispatchedAt": 1775212367627
+      "dispatchedAt": null
     },
     {
       "id": "18",
@@ -423,10 +423,10 @@
       "description": "Study a temporal disturbance affecting local space, analyzing patterns and ensuring containment to prevent harm to nearby systems, relying on advanced scientific expertise.",
       "sector": "Beta Quadrant",
       "difficulty": "hard",
-      "status": "in progress",
-      "shipId": "8",
+      "status": "pending",
+      "shipId": null,
       "durationMinutes": 9,
-      "dispatchedAt": 1775212424263
+      "dispatchedAt": null
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
